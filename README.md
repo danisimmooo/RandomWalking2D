@@ -79,7 +79,7 @@ $$\langle R^2 \rangle \propto N$$
 
 ### Вариант 2. Запуск через Visual Studio
 1. Склонируйте репозиторий с помощью команды:
-   `git clone [https://github.com/notyetdinohaha-png/RandomWalking2D.git](https://github.com/notyetdinohaha-png/RandomWalking2D.git)`
+   `git clone https://github.com/danisimmooo/RandomWalking2D.git`
 2. Откройте файл решения `.sln` в Microsoft Visual Studio.
 3. Дождитесь восстановления зависимостей .NET.
 4. Выполните сборку решения (Build Solution).
@@ -96,4 +96,4 @@ $$\langle R^2 \rangle \propto N$$
 Для проверки точности вычислений используются автоматизированные тесты и контрольные прогоны модели.
 
 ## 12. Репозиторий
-Исходный код, история коммитов и задачи команды доступны в GitHub-репозитории проекта. Готовые сборки можно забрать во вкладке Releases.
+Исходный код, история коммитов и задачи команды доступны в [GitHub-репозитории проекта](https://github.com/danisimmooo/RandomWalking2D). Готовые сборки можно забрать во вкладке Releases.
