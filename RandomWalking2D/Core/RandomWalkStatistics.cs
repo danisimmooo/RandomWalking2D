@@ -64,4 +64,3 @@ namespace RandomWalking2D.Core
         }
     }
 }
-ы
