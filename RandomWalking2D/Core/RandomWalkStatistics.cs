@@ -17,7 +17,6 @@ namespace RandomWalking2D.Core
             simulator = new RandomWalkSimulator(seed);
         }
 
-        // Выполнение серии из M реализаций
         public RandomWalkResult RunExperiments(
             int steps,
             double stepLength,
@@ -34,23 +33,22 @@ namespace RandomWalking2D.Core
             if (stepLength <= 0 ||
                 double.IsNaN(stepLength) ||
                 double.IsInfinity(stepLength))
-            {
                 throw new ArgumentException(
                     "Длина шага должна быть положительной.");
-            }
 
             double[] distances = new double[simulations];
+            double[] finalX = new double[simulations];
+            double[] finalY = new double[simulations];
 
             for (int i = 0; i < simulations; i++)
             {
-                double x;
-                double y;
+                double x, y;
 
                 simulator.Simulate(
-                    steps,
-                    stepLength,
-                    out x,
-                    out y);
+                    steps, stepLength, out x, out y);
+
+                finalX[i] = x;
+                finalY[i] = y;
 
                 distances[i] =
                     RandomWalkSimulator.CalculateDistance(x, y);
@@ -58,9 +56,12 @@ namespace RandomWalking2D.Core
 
             return new RandomWalkResult(
                 distances,
+                finalX,
+                finalY,
                 steps,
                 simulations,
                 stepLength);
         }
     }
 }
+ы
